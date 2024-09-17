@@ -3,8 +3,10 @@ import React from "react";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { Colors } from "@/constants/Colors";
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 export default function Tab() {
   return (
+
     <Tabs
       screenOptions={{
         tabBarActiveBackgroundColor: "",
@@ -13,24 +15,59 @@ export default function Tab() {
       }}
     >
       <Tabs.Screen
-        name="home"
+        name="Search"
         options={{
-          headerTitle: "Home",
+          headerTitle: "search",
           headerShown: false,
-
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={24}color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="Favorites"
         options={{
-          headerTitle: "Home",
+          headerTitle: "favorites",
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            // <AntDesign name="home" size={24} color={color} />
-            <FontAwesome5 name="wpexplorer" size={24} color={color} />
+         
+            <AntDesign name="hearto" size={24} color={color} />
+          ),
+          
+        }}
+      />
+    <Tabs.Screen
+        name="Bookings"
+        options={{
+          headerTitle: "bookings",
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+          
+            <MaterialCommunityIcons name="book-minus-multiple-outline" size={24} color={color } />
+          ),
+          
+        }}
+      />
+      <Tabs.Screen
+        name="Inbox"
+        options={{
+          headerTitle: "Inbox",
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+           <MaterialCommunityIcons name="message-reply-text-outline" size={24} color={color} />
+       
+          ),
+          
+        }}
+      />
+       <Tabs.Screen
+        name="Profile"
+        options={{
+          headerTitle: "Profile",
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+        
+            <AntDesign name="user" size={24} color={color} />
           ),
           
         }}
